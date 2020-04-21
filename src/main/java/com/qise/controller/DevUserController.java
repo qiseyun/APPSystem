@@ -69,4 +69,13 @@ public class DevUserController {
         return "devHome/home";
     }
 
+    /**
+     * 退出登陆
+     * @return
+     */
+    @RequestMapping(value="/begin")
+    public String logout(){
+        return "devLogin";
+    }
+
 }

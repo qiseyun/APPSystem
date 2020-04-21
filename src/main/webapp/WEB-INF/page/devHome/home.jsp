@@ -12,5 +12,6 @@
 </head>
 <body>
     进入主页成功
+    <a href="">logout</a>
 </body>
 </html>

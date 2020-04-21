@@ -1,4 +1,3 @@
-<%@ page import="com.qise.domain.DevUser" %>
 <%--
   Created by IntelliJ IDEA.
   User: MSI-PC
@@ -10,16 +9,23 @@
 <html>
 <head>
     <title>APP开发者平台</title>
+    <style>
+        .divOne{
+            background-color: lightcoral;
+            horiz-align: center;
+        }
+    </style>
 </head>
-
 <body>
 <h1>APP开发者平台</h1>
-<form action="Login" method="post">
-    <input type="text" name="devCode" placeholder="请输入用户名" /><br/>
-    <input type="password" name="devPassword" placeholder="请输入密码" /><br/>
-    <span>${error}</span><br/>
-    <input type="submit" value="登陆" />
-    <input type="reset" value="重置"  />
-</form>
+<div class="divOne">
+    <form action="Login" method="post">
+        <input type="text" name="devCode" placeholder="请输入用户名" /><br/>
+        <input type="password" name="devPassword" placeholder="请输入密码" /><br/>
+        <span>${error}</span><br/>
+        <input type="submit" value="登陆" />
+        <input type="reset" value="重置"  />
+    </form>
+</div>
 </body>
 </html>

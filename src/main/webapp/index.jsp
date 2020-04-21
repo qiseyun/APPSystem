@@ -10,7 +10,11 @@
 <head>
     <title>APP信息管理平台</title>
     <style>
-        h1,a{
+        h1{
+            color: #A878AF;
+            text-align: center;
+        }
+        a{
             color: #A878AF;
             text-align: center;
         }
