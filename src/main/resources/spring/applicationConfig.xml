@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+    <!--开启注解扫描 希望处理service和dao，controller不需要spring框架去处理-->
+        <context:component-scan base-package="com.qise">
+            <!--不去扫描Controller-->
+            <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+        </context:component-scan>
+
+
+    <!--spring整合mybatis-->
+        <!--配置连接池-->
+        <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+            <property name="driverClass" value="com.mysql.jdbc.Driver" />
+            <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/appinfodb" />
+            <property name="user" value="root" />
+            <property name="password" value="123456" />
+        </bean>
+        <!--配置SqlSessionFactory工厂-->
+        <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+            <property name="dataSource" ref="dataSource" />
+
+            <!--&lt;!&ndash; 配置SQL映射文件信息 &ndash;&gt;-->
+            <!--<property name="mapperLocations">-->
+                <!--<list>-->
+                    <!--<value>classpath:mapper/**/*.xml</value>-->
+                <!--</list>-->
+            <!--</property>-->
+        </bean>
+        <!--配置各dao所在的包-->
+        <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.qise.dao" />
+        </bean>
+
+
+
+    <!--配置声明式事务管理-->
+        <!--配置事务管理器-->
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource" />
+        </bean>
+
+        <!--配置事务通知-->
+        <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">-->
+            <!--<tx:attributes>-->
+                <!--<tx:method name="find*" read-only="true"/>-->
+                <!--<tx:method name="*" isolation="DEFAULT" read-only="false"/>-->
+            <!--</tx:attributes>-->
+        <!--</tx:advice>-->
+        <!--&lt;!&ndash;配置aop增强&ndash;&gt;-->
+        <!--<aop:config>-->
+            <!--<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.qise.service.impl.*ServiceImpl.*(..))" />-->
+        <!--</aop:config>-->
+
+    <!--使用注解实现事务管理的配置-->
+        <tx:annotation-driven />
+
+</beans>
