@@ -18,7 +18,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 <!--版本控制-->
-    <spring.version>5.0.2.RELEASE</spring.version>
+    <spring.version>5.2.5.RELEASE</spring.version>
     <slf4j.version>1.7.25</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
     <mysqle.version>5.1.6</mysqle.version>
