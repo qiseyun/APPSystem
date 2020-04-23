@@ -20,9 +20,9 @@
         }
     </style>
 </head>
-<body>
-    <h1>APP信息管理平台</h1>
-    <a href="">后台管理系统入口</a>
+<body style="background-color: #5A738E">
+    <h1>APP信息管理平台</h1><br/>
+    <a href="">后台管理系统入口</a><br/>
     <a href="dev/begin">开发者平台入口</a>
 </body>
 </html>
