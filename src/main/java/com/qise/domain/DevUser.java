@@ -1,6 +1,7 @@
 package com.qise.domain;
 
 import javax.xml.crypto.Data;
+import java.io.Serializable;
 
 /**
  * @author jql
@@ -10,7 +11,7 @@ import javax.xml.crypto.Data;
 /**
  * 开发者用户
  */
-public class DevUser {
+public class DevUser implements Serializable {
     private long id;
     private String devCode;
     private String devName;
@@ -18,6 +19,7 @@ public class DevUser {
     private String devEmail;
     private String devInfo;
     private long createdBy;
+
     private Data creationDate;
     private long modifyBy;
     private Data modifyDate;
