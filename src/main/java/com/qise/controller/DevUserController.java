@@ -41,7 +41,7 @@ public class DevUserController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/Login",method = RequestMethod.POST)
+    @RequestMapping(value = "/Login")
     public String doLogin(@RequestParam String devCode,
                           @RequestParam String devPassword,
                           HttpServletRequest request,

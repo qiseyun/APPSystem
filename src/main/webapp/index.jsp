@@ -9,24 +9,13 @@
 <html>
 <head>
     <title>APP信息管理平台</title>
-    <style>
-        h1{
-            color: #A878AF;
-            text-align: center;
-        }
-        .boxOne{
-            width: 200px;
-            height: 80px;
-            color: #A878AF;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/statics/css/oindex.css" />
 </head>
-<body style="background-color: #5A738E">
-    <h1>APP信息管理平台</h1><br/>
-    <div class="boxOne">
-        <a href="">后台管理系统入口</a><br/>
-        <a href="dev/begin">开发者平台入口</a>
+<body>
+    <div id="app">
+        <h1 class="h101">APP信息管理平台</h1>
+        <h3 class="h301"><a href="#">后端管理系统入口</a></h3>
+        <h3 class="h302"><a href="dev/begin">开发者平台入口</a></h3>
     </div>
 </body>
 </html>

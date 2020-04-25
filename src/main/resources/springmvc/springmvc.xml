@@ -21,9 +21,6 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <!--过滤静态资源-->
-    <mvc:resources mapping="/statics/**" location="statics" />
-
     <!--配置拦截器-->
     <mvc:interceptors>
         <mvc:interceptor>
@@ -34,5 +31,8 @@
 
     <!--开启SpringMvc注解支持-->
     <mvc:annotation-driven />
+
+    <!--过滤静态资源-->
+    <mvc:resources location="/statics/" mapping="/statics/**" />
 
 </beans>

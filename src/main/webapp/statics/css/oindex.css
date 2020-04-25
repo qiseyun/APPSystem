@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+ }
+
+ [v-cloak]{
+     display: none;
+ }
+ a{
+    text-decoration: none;
+    color:rgba(99, 99, 99, 1);
+ }
+ #app{
+     width: 500px;
+     height: 400px;
+     position: relative;
+     left: 600px;
+     top:60px;
+ }
+ .h101{
+     color:rgba(99, 99, 99, 1);
+     position: absolute;
+     left: 10px;
+     top: 10px;
+ }
+ .h301{
+    color:rgba(99, 99, 99, 1);
+    position: absolute;
+    left: 10px;
+    top: 65px;
+}
+.h302{
+    color:rgba(99, 99, 99, 1);
+    position: absolute;
+    left: 10px;
+    top: 100px;
+}
