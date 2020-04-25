@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+ }
+
+ [v-cloak]{
+     display: none;
+ }
+ a{
+    text-decoration: none;
+    color:rgb(88, 86, 86);
+ }
+ #app{
+     position: relative;
+     width: 100%;
+     height: 100%;
+ }
+ #a01{
+     width: 83%;
+     height: 100%;
+     position: absolute;
+     left: 17%;
+ }
+ .div01{
+     width: 100%;
+     height: 5%;
+     background-color: rgb(209, 197, 197);
+     position: absolute;
+ }
+ .span001{
+     position: absolute;
+     left: 20px;
+     top: 10px;
+ }
+ .div0101{
+     width: 7%;
+     height: 100%;
+     background-color:rgb(209, 202, 202) ;
+     position: absolute;
+     left: 93%;
+ }
+ .span002{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    size: 8px;
+    color:rgb(136, 125, 125) ;
+}
+.div02{
+    width: 90%;
+    height: 85%;
+    background-color: rgb(240, 230, 240);
+    position: absolute;
+    top: 5%;
+}
+.h201{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+.span003{
+    position: absolute;
+    left: 90%;
+    top: 8px;
+ 
+}
+.a1{
+    position: absolute;
+    left: 95%;
+    top: 10px;
+}
+.div03{
+    width: 100%;
+    height: 6%;
+    background-color: white;
+    position: absolute;
+    top: 94%;
+}
+.h40101{
+    size: 10px;
+    color:rgb(197, 185, 185);
+    position: absolute;
+    left: 80%;
+    top: 10px;
+
+}
+
+ #a02{
+     width: 17%;
+     height: 100%;
+     background-color: darkslategray;
+     position: absolute;
+     color: white;
+ }
+ 
+ .h201{
+     position: absolute;
+     left: 20px;
+     top: 15px;
+ }
+
+ .d01{
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     overflow: hidden;
+     position: absolute;
+     left: 10px;
+     top: 80px;
+ }
+ img{
+     width: 60px;
+     height: 60px;
+ }
+ .h40201{
+     position: absolute;
+     left: 100px;
+     top: 88px;
+ }
+ .h40202{
+    position: absolute;
+    left:100px;
+    top: 105px;
+}
+.h40203{
+    position: absolute;
+    left:10px;
+    top: 145px;
+}
+.span0201{
+    position: absolute;
+    left:10px;
+    top: 200px;
+}.span0202{
+    position: absolute;
+    left:10px;
+    top: 250px;
+}
+.span02001{
+    position: absolute;
+    left:220px;
+}
+.span02002{
+    position: absolute;
+    left:220px;
+}
+.div0201{
+    width: 18%;
+    height: 5%;
+    position: absolute;
+    top: 95%;
+    background-color: teal;
+    
+}
+.span021{
+    top: 15px;
+    margin-left: 25px;
+}
+
+
