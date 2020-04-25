@@ -14,15 +14,19 @@
             color: #A878AF;
             text-align: center;
         }
-        a{
+        .boxOne{
+            width: 200px;
+            height: 80px;
             color: #A878AF;
-            text-align: center;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body style="background-color: #5A738E">
     <h1>APP信息管理平台</h1><br/>
-    <a href="">后台管理系统入口</a><br/>
-    <a href="dev/begin">开发者平台入口</a>
+    <div class="boxOne">
+        <a href="">后台管理系统入口</a><br/>
+        <a href="dev/begin">开发者平台入口</a>
+    </div>
 </body>
 </html>

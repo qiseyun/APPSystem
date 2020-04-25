@@ -103,7 +103,7 @@ public class DataDictionary implements Serializable {
 
     @Override
     public String toString() {
-        return "DataDictionary{" +
+        return "DataDictionaryMapper{" +
                 "id=" + id +
                 ", typeCode='" + typeCode + '\'' +
                 ", typeName='" + typeName + '\'' +

@@ -24,6 +24,14 @@
     <!--过滤静态资源-->
     <mvc:resources mapping="/statics/**" location="statics" />
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/dev/init" />
+            <bean class="com.qise.interceptor.DevInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--开启SpringMvc注解支持-->
     <mvc:annotation-driven />
 

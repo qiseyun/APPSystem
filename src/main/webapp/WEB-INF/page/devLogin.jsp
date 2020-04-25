@@ -11,13 +11,21 @@
     <title>APP开发者平台</title>
     <style>
         .divOne{
-            background-color: lightcoral;
-            horiz-align: center;
+            width: 200px;
+            height: 100px;
+            background-color: #5A738E;
+            margin: 0 auto;
+        }
+        form{
+            text-align: center;
+        }
+        body{
+            background-color: #5A738E;
         }
     </style>
 </head>
 <body>
-<h1>APP开发者平台</h1>
+<h1 style="text-align: center">APP开发者平台</h1>
 <div class="divOne">
     <form action="Login" method="post">
         <input type="text" name="devCode" placeholder="请输入用户名" /><br/>
