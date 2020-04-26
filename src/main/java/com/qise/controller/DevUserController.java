@@ -51,7 +51,7 @@ public class DevUserController {
         if (devCode.equals(user.getDevCode()) && devPassword.equals(user.getDevPassword())){
             session.setAttribute("devUserSession", user);
             //页面跳转
-            return "redirect:/dev/init";
+            return "redirect:/dev/flatform/init";
         }else {
             //页面跳转,带出提示信息
             request.setAttribute("error", "用户名或密码不正确");
@@ -64,7 +64,7 @@ public class DevUserController {
      * @param session
      * @return
      */
-    @RequestMapping(value="/init")
+    @RequestMapping(value="/flatform/init")
     public String main(HttpSession session){
         if(session.getAttribute("devUserSession") == null){
             return "redirect:/dev/login";

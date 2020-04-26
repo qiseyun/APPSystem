@@ -37,7 +37,7 @@
     <%--</form>--%>
     <div id="app">
         <h2 class="h201">———   APP开发者平台   ———</h2>
-        <form action="Login" method="post" >
+        <form action="dev/Login" method="post" >
             <input class="input01" type="text" name="devCode"  placeholder="  请输入用户名">
             <input class="input02" type="password" name="devPassword" placeholder="  请输入密码">
             <input class="bu01" type="submit" value="登陆" />
@@ -46,6 +46,7 @@
         <h3>—————————————————</h3>
         <h4>@2020 All Rights Relerls</h4>
         <span style="color: red">${error}</span>
+        <p>${pageContext.request.contextPath }</p>
     </div>
 
 <%--</div>--%>
