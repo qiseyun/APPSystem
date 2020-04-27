@@ -26,22 +26,22 @@
             <br/><br/><br/><br/>
             <ul class="nav nav-list well">
                 <li class="nav-header">
-                    <a href="dev/flatform/init">首页</a>
+                    <a href="${pageContext.request.contextPath }/dev/flatform/init">首页</a>
                 </li>
                 <li class="nav-header">
                     APP用户管理
                 </li>
                 <li>
-                    <a href="<%=request.getContextPath()%>/403.jsp">app开发者账户申请</a>
+                    <a href="${pageContext.request.contextPath }/403.jsp">app开发者账户申请</a>
                 </li>
                 <li>
-                    <a href="<%=request.getContextPath()%>/403.jsp">个人信息维护</a>
+                    <a href="${pageContext.request.contextPath }/403.jsp">个人信息维护</a>
                 </li>
                 <li class="nav-header">
                     APP应用管理
                 </li>
                 <li>
-                    <a href="maintain/begin">app维护</a>
+                    <a href="${pageContext.request.contextPath }/dev/flatform/app/begin">app维护</a>
                 </li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
             <blockquote class="pull-right">
                 <small>注销 <cite></cite></small>
                 <p>
-                    <a href="dev/over">logOut</a>
+                    <a href="${pageContext.request.contextPath }/dev/over">logOut</a>
                 </p>
             </blockquote>
             <br/><br/><br/><br/>
@@ -57,10 +57,10 @@
                 <fieldset>
                     <legend>表单项</legend>
                     <p>
-                        <input type="text" /> --------<input type="text" /> --------<input type="text" />
+                        软件名称<input type="text" /> ------APP状态<input type="text" /> ------所属平台<input type="text" />
                     </p>
                     <p>
-                        <input type="text" /> --------<input type="text" /> --------<input type="text" />
+                        一级分类<input type="text" /> ------二级分类<input type="text" /> ------三级分类<input type="text" />
                     </p> <span class="help-block">这里填写帮助信息.</span> <label class="checkbox"><button class="btn" type="submit">提交</button></label>
                 </fieldset>
             </form>

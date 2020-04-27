@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2020/4/25 - 10:29
  */
 @Controller
-@RequestMapping(value = "/maintain")
+@RequestMapping(value = "/dev/flatform/app")
 public class DevSEController {
 
     @RequestMapping(value="/begin")

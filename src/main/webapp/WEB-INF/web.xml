@@ -27,7 +27,7 @@
       <param-value>classpath:springmvc/springmvc.xml</param-value>
     </init-param>
     <!--DispatcherServlet最先被加载，自动启动-->
-    <!--<load-on-startup>1</load-on-startup>-->
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>springmvc</servlet-name>

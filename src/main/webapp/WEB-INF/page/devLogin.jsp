@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>APP开发者平台</title>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/statics/css/odevLogin.css" />
+    <link href="/statics/css/odevLogin.css" rel="stylesheet" />
     <%--<style>--%>
         <%--.divOne{--%>
             <%--width: 200px;--%>
@@ -37,7 +37,7 @@
     <%--</form>--%>
     <div id="app">
         <h2 class="h201">———   APP开发者平台   ———</h2>
-        <form action="dev/Login" method="post" >
+        <form action="${pageContext.request.contextPath }/dev/Login" method="post" >
             <input class="input01" type="text" name="devCode"  placeholder="  请输入用户名">
             <input class="input02" type="password" name="devPassword" placeholder="  请输入密码">
             <input class="bu01" type="submit" value="登陆" />
