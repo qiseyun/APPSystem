@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--3、别名-->
+    <!--<typeAliases>-->
+        <!--&lt;!&ndash;全部别名的创建&ndash;&gt;-->
+        <!--<package name="com.qise.domain"/>-->
+    <!--</typeAliases>-->
+    <!--<mappers>-->
+        <!--<package name="com.qise.dao" />-->
+    <!--</mappers>-->
+
+</configuration>

@@ -1,0 +1,140 @@
+package com.qise.domain;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * @author jql
+ * @date 2020/5/1 - 13:56
+ */
+public class AdPromotion implements Serializable {
+    private Long id;
+
+    private Long appId;
+
+    private String adPicPath;
+
+    private Long adPV;
+
+    private Integer carouselPosition;
+
+    private Date startTime;
+
+    private Date endTime;
+
+    private Long createdBy;
+
+    private Date creationDate;
+
+    private Long modifyBy;
+
+    private Date modifyDate;
+
+    public AdPromotion() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getAppId() {
+        return appId;
+    }
+
+    public void setAppId(Long appId) {
+        this.appId = appId;
+    }
+
+    public String getAdPicPath() {
+        return adPicPath;
+    }
+
+    public void setAdPicPath(String adPicPath) {
+        this.adPicPath = adPicPath;
+    }
+
+    public Long getAdPV() {
+        return adPV;
+    }
+
+    public void setAdPV(Long adPV) {
+        this.adPV = adPV;
+    }
+
+    public Integer getCarouselPosition() {
+        return carouselPosition;
+    }
+
+    public void setCarouselPosition(Integer carouselPosition) {
+        this.carouselPosition = carouselPosition;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public Long getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(Long createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public Long getModifyBy() {
+        return modifyBy;
+    }
+
+    public void setModifyBy(Long modifyBy) {
+        this.modifyBy = modifyBy;
+    }
+
+    public Date getModifyDate() {
+        return modifyDate;
+    }
+
+    public void setModifyDate(Date modifyDate) {
+        this.modifyDate = modifyDate;
+    }
+
+    @Override
+    public String toString() {
+        return "AdPromotion{" +
+                "id=" + id +
+                ", appId=" + appId +
+                ", adPicPath='" + adPicPath + '\'' +
+                ", adPV=" + adPV +
+                ", carouselPosition=" + carouselPosition +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", createdBy=" + createdBy +
+                ", creationDate=" + creationDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                '}';
+    }
+}

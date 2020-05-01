@@ -11,28 +11,32 @@
        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
     <!--开启注解扫描-->
-    <context:component-scan base-package="com.qise">
-        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
-    </context:component-scan>
+        <!--<context:component-scan base-package="com.qise.controller" />-->
+        <context:component-scan base-package="com.qise">
+            <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+            <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+            <!--<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
+        </context:component-scan>
+
 
     <!--配置视图解析器(内部资源视图解析器)-->
-    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/page/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
+        <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+            <property name="prefix" value="/WEB-INF/page/" />
+            <property name="suffix" value=".jsp" />
+        </bean>
 
     <!--配置拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/dev/init" />
-            <bean class="com.qise.interceptor.DevInterceptor" />
-        </mvc:interceptor>
-    </mvc:interceptors>
-
-    <!--开启SpringMvc注解支持-->
-    <mvc:annotation-driven />
+        <mvc:interceptors>
+            <mvc:interceptor>
+                <mvc:mapping path="/dev/init" />
+                <bean class="com.qise.interceptor.DevInterceptor" />
+            </mvc:interceptor>
+        </mvc:interceptors>
 
     <!--过滤静态资源-->
-    <mvc:resources location="/statics/" mapping="/statics/**" />
+        <mvc:resources location="/statics/" mapping="/statics/**" />
+
+    <!--开启SpringMvc注解支持-->
+        <mvc:annotation-driven />
 
 </beans>

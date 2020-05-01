@@ -57,46 +57,64 @@
                 <fieldset>
                     <legend>表单项</legend>
                     <p>
-                        软件名称<input type="text" /> ------APP状态<input type="text" /> ------所属平台<input type="text" />
+                        软件名称<input type="text" name="" /> ------
+                        APP状态<input type="text" /> ------
+                        所属平台<input type="text" />
                     </p>
                     <p>
-                        一级分类<input type="text" /> ------二级分类<input type="text" /> ------三级分类<input type="text" />
-                    </p> <span class="help-block">这里填写帮助信息.</span> <label class="checkbox"><button class="btn" type="submit">提交</button></label>
+                        一级分类<input type="text" /> ------
+                        <%--<select name="queryStatus" class="form-control">--%>
+                            <%--<c:if test="${statusList != null }">--%>
+                                <%--<option value="">--请选择--</option>--%>
+                                <%--<c:forEach var="dataDictionary" items="${statusList}">--%>
+                                    <%--<option--%>
+                                            <%--<c:if test="${dataDictionary.valueid == queryStatus }">selected="selected"</c:if>--%>
+                                            <%--value="${dataDictionary.valueid}">${dataDictionary.valuename}</option>--%>
+                                <%--</c:forEach>--%>
+                            <%--</c:if>--%>
+                        <%--</select>--%>
+                        二级分类<input type="text" /> ------
+                        三级分类<input type="text" />
+                    </p> <span class="help-block">这里填写帮助信息.</span>
+                    <button class="btn" type="submit">查询</button>
                 </fieldset>
             </form>
             <table class="table table-hover table-bordered">
                 <thead>
                 <tr>
                     <th>
-                        编号
+                        APK名称
                     </th>
                     <th>
-                        产品
+                        软件大小(单位:M)
                     </th>
                     <th>
                         交付时间
                     </th>
                     <th>
-                        状态
+                        所属平台
+                    </th>
+                    <th>
+                        所属分类(一级分类、二级分类、三级分类)
                     </th>
                     <th>
                         状态
                     </th>
                     <th>
-                        状态
+                        下载次数
                     </th>
                     <th>
-                        状态
+                        最新版本号
                     </th>
                     <th>
-                        状态
+                        操作
                     </th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>
-                        1
+                        ${AppInfo.APKName}
                     </td>
                     <td>
                         TB - Monthly
@@ -119,111 +137,17 @@
                     <td>
                         Default
                     </td>
-                </tr>
-                <tr class="success">
                     <td>
-                        1
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                    <td>
-                        Approved
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
+                        操作
                     </td>
                 </tr>
-                <tr class="error">
-                    <td>
-                        2
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        02/04/2012
-                    </td>
-                    <td>
-                        Declined
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                </tr>
-                <tr class="warning">
-                    <td>
-                        3
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        03/04/2012
-                    </td>
-                    <td>
-                        Pending
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                </tr>
-                <tr class="info">
-                    <td>
-                        4
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        04/04/2012
-                    </td>
-                    <td>
-                        Call in to confirm
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                </tr>
+                <%--<c:forEach items="${list}" var="account">--%>
+                    <%--<tr>--%>
+                        <%--<td>${account.id}</td>--%>
+                        <%--<td>${account.name}</td>--%>
+                        <%--<td>${account.money}</td>--%>
+                    <%--</tr>--%>
+                <%--</c:forEach>--%>
                 </tbody>
             </table>
             <div class="pagination pagination-centered">

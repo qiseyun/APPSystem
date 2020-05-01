@@ -13,7 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
  * @author jql
  * @date 2020/4/20 - 15:26
  */
-@Service("devUserService")
+@Service
+@Transactional
 public class DevUserServiceImpl implements DevUserService {
 
     @Autowired

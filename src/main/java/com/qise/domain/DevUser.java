@@ -1,5 +1,7 @@
 package com.qise.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import javax.xml.crypto.Data;
 import java.io.Serializable;
 
@@ -13,15 +15,24 @@ import java.io.Serializable;
  */
 public class DevUser implements Serializable {
     private long id;
+
     private String devCode;
+
     private String devName;
+
     private String devPassword;
+
     private String devEmail;
+
     private String devInfo;
+
     private long createdBy;
 
+    @JSONField(format = "yyyy-MM-dd")
     private Data creationDate;
+
     private long modifyBy;
+
     private Data modifyDate;
 
     public DevUser() {
