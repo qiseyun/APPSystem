@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
@@ -53,31 +54,42 @@
                 </p>
             </blockquote>
             <br/><br/><br/><br/>
-            <form>
+            <form action="${pageContext.request.contextPath}/dev/flatform/app/list" method="post">
                 <fieldset>
                     <legend>表单项</legend>
                     <p>
-                        软件名称<input type="text" name="" /> ------
-                        APP状态<input type="text" /> ------
-                        所属平台<input type="text" />
+                        软件名称<input type="text" name="softwareName" /> ------
+                        app状态
+                        <select name="">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>------
+                        所属平台
+                        <select name="">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>
                     </p>
                     <p>
-                        一级分类<input type="text" /> ------
-                        <%--<select name="queryStatus" class="form-control">--%>
-                            <%--<c:if test="${statusList != null }">--%>
-                                <%--<option value="">--请选择--</option>--%>
-                                <%--<c:forEach var="dataDictionary" items="${statusList}">--%>
-                                    <%--<option--%>
-                                            <%--<c:if test="${dataDictionary.valueid == queryStatus }">selected="selected"</c:if>--%>
-                                            <%--value="${dataDictionary.valueid}">${dataDictionary.valuename}</option>--%>
-                                <%--</c:forEach>--%>
-                            <%--</c:if>--%>
-                        <%--</select>--%>
-                        二级分类<input type="text" /> ------
-                        三级分类<input type="text" />
+                        一级分类
+                        <select name="">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>------
+                        二级分类
+                        <select name="">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>------
+                        三级分类
+                        <select name="">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>
                     </p> <span class="help-block">这里填写帮助信息.</span>
                     <button class="btn" type="submit">查询</button>
                 </fieldset>
+                <button class="btn" type="submit"><a href="${pageContext.request.contextPath}/dev/flatform/app/addBegin">新增app信息</a></button>
             </form>
             <table class="table table-hover table-bordered">
                 <thead>
@@ -112,35 +124,26 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                        ${AppInfo.APKName}
-                    </td>
-                    <td>
-                        TB - Monthly
-                    </td>
-                    <td>
-                        01/04/2012
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        Default
-                    </td>
-                    <td>
-                        操作
-                    </td>
-                </tr>
+                <c:forEach var="list" items="${applist}" >
+                    <tr>
+                        <td>${list.softwareName}</td>
+                        <td>${list.APKName}</td>
+                        <td>${list.softwareSize}</td>
+                        <td>${list.flatformId}</td>
+                        <td>${list.categoryLevel1},${list.categoryLevel2},${list.categoryLevel3}</td>
+                        <td>${list.status}</td>
+                        <td>${list.downloads}</td>
+                        <td>${list.versionId}</td>
+                        <td>
+                            <select name="">
+                                <option><a href="#">acti</a></option>
+                                <option><a href="#">acti</a></option>
+                                <option><a href="#">acti</a></option>
+                                <option><a href="#">acti</a></option>
+                            </select>
+                        </td>
+                    </tr>
+                </c:forEach>
                 <%--<c:forEach items="${list}" var="account">--%>
                     <%--<tr>--%>
                         <%--<td>${account.id}</td>--%>

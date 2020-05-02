@@ -16,7 +16,7 @@ public interface DevUserMapper {
      * 查询所有
      * @return
      */
-    @Select("SELECT devCode,devPassword FROM dev_user")
+    @Select("select devCode,devPassword from dev_user ")
     public DevUser selectByDevCodeAndPwd(String devCode, String devPassword);
 
 

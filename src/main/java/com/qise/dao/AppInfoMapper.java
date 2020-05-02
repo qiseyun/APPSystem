@@ -1,23 +1,23 @@
 package com.qise.dao;
 
 import com.qise.domain.AppInfo;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Repository;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @author jql
- * @date 2020/4/25 - 10:15
+ * @date 2020/5/2 - 16:07
  */
-@Repository
 public interface AppInfoMapper {
 
-    /**
-     * 软件名称的模糊查询
-     * @return
-     */
-    @Select("")
-    public void find();
+    @Select("select softwareName, APKName,softwareSize,flatformId, \n" +
+            "categoryLevel1,categoryLevel2,categoryLevel3, \n" +
+            "STATUS,downloads,versionId \n" +
+            "from app_info;")
+    public List<AppInfo> findAll();
+
+    @Select("select * from app_info where softwareName like '%${value}%' ")
+    public List<AppInfo> findByName(String softwareName);
+
 }
