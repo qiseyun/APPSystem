@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>开发者主页</title>
-    <link href="/statics/mycss/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/statics/mycss/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">

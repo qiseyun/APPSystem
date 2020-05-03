@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>开发者登陆</title>
-    <link href="/statics/mycss/bootstrap.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath }/statics/mycss/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body style="background-color: lightgray;">
 <br/><br/><br/><br/><br/><br/><br/><br/>

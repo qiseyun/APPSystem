@@ -2,6 +2,7 @@ package com.qise.service.impl;
 
 import com.qise.dao.AppInfoMapper;
 import com.qise.domain.AppInfo;
+import com.qise.entaty.QueryPageBean;
 import com.qise.service.AppInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author jql
@@ -30,5 +32,24 @@ public class AppInfoServiceImpl implements AppInfoService{
     @Override
     public List<AppInfo> findByName(String softwareName) {
         return appInfoMapper.findByName(softwareName);
+    }
+
+    @Override
+    public List<AppInfo> findAppInfo(QueryPageBean queryPageBean) {
+        return null;
+    }
+
+    /**
+     * 查询所有软件基本信息
+     * @return
+     */
+    @Override
+    public List<AppInfo> findAlltwo() {
+        return appInfoMapper.findAlltwo();
+    }
+
+    @Override
+    public void addAppInfo(Map map) {
+
     }
 }

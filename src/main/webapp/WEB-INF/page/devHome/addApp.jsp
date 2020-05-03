@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>开发者主页</title>
-    <link href="/statics/mycss/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/statics/mycss/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
@@ -53,27 +53,32 @@
             </blockquote>
             <form>
                 <fieldset><legend contenteditable="true">表单项</legend> <label contenteditable="true">表签名</label>
-                    <p>软件名称：*<input placeholder="Type something…" type="text"></p>
+                    <p>软件名称：*<input placeholder="请输入软件名称" type="text" name=""></p>
 
-                    <p>APK名称：*<input placeholder="Type something…" type="text"></p>
+                    <p>APK名称：*<input placeholder="请输入APK名称" type="text" name=""></p>
 
-                    <p>支持ROM:*<input placeholder="Type something…" type="text"></p>
+                    <p>支持ROM：*<input placeholder="请输入支持的ROM" type="text" name=""></p>
 
-                    <p>界面语言：*<input placeholder="Type something…" type="text"></p>
+                    <p>界面语言：*<input placeholder="请输入软件的界面语言" type="text" name=""></p>
 
-                    <p>所属平台：*<input placeholder="Type something…" type="text"></p>
+                    <p>软件大小：*<input placeholder="请输入软件大小" type="text" name=""></p>
 
-                    <p>一级分类：*<input placeholder="Type something…" type="text"></p>
+                    <p>下载次数：*<input placeholder="请输入下载次数" type="text" name=""></p>
+
+                    <p>所属平台：*<input placeholder="---请选择---" type="text"></p>
+
+                    <p>一级分类：*<input placeholder="---请选择---" type="text"></p>
 
                     <p>二级分类：*<input placeholder="Type something…" type="text"></p>
 
                     <p>三级分类：*<input placeholder="Type something…" type="text"></p>
 
-                    <p>app状态：*<input placeholder="Type something…" type="text"></p>
+                    <p>app状态：*<input placeholder="待审核" type="text"></p>
 
-                    <p>应用简介：*<input placeholder="Type something…" type="text"></p>
+                    <p>应用简介：*<input placeholder="请输入软件相关信息或介绍" type="text" name=""></p>
 
                     <p>log图片：*<input placeholder="Type something…" type="file" name=""></p>
+
                     <span class="help-block" contenteditable="true">这里填写帮助信息.</span> <label class="checkbox" contenteditable="true"><button class="btn" contenteditable="true" type="submit">提交</button></label></fieldset>
             </form>
 

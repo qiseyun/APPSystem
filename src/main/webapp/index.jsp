@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>APP信息管理平台</title>
-    <link href="/statics/mycss/oindex.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath }/statics/mycss/oindex.css" rel="stylesheet" />
 </head>
 <body>
     <div id="app">

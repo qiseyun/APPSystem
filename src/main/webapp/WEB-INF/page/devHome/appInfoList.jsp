@@ -10,8 +10,11 @@
 <html>
 <head>
     <title>Title</title>
-    <!-- css -->
-    <link href="/statics/mycss/bootstrap.min.css" rel="stylesheet">
+    <%-- css --%>
+    <link href="${pageContext.request.contextPath }/statics/mycss/bootstrap.min.css" rel="stylesheet">
+    <%-- js --%>
+    <script src="${pageContext.request.contextPath }/statics/js/jquery-3.4.1.min.js"></script>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -58,37 +61,44 @@
                 <fieldset>
                     <legend>表单项</legend>
                     <p>
-                        软件名称<input type="text" name="softwareName" /> ------
-                        app状态
+                        软件名称:<input type="text" name="softwareName" /> ------
+                        app状态:
                         <select name="">
+                            <option>--请选择--</option>
                             <option>option 1</option>
                             <option>option 2</option>
                         </select>------
-                        所属平台
+                        所属平台:
                         <select name="">
+                            <option>--请选择--</option>
                             <option>option 1</option>
                             <option>option 2</option>
                         </select>
                     </p>
                     <p>
-                        一级分类
-                        <select name="">
+                        一级分类:
+                        <select name="categoryLevel1">
+                            <option>--请选择--</option>
+                            <c:forEach var="categoryLevel1" items="${one}" >
+                                <option>${categoryLevel1}</option>
+                            </c:forEach>
+                        </select>------
+                        二级分类:
+                        <select name="categoryLevel2">
+                            <option>--请选择--</option>
                             <option>option 1</option>
                             <option>option 2</option>
                         </select>------
-                        二级分类
-                        <select name="">
-                            <option>option 1</option>
-                            <option>option 2</option>
-                        </select>------
-                        三级分类
-                        <select name="">
+                        三级分类:
+                        <select name="categoryLevel3">
+                            <option>--请选择--</option>
                             <option>option 1</option>
                             <option>option 2</option>
                         </select>
                     </p> <span class="help-block">这里填写帮助信息.</span>
                     <button class="btn" type="submit">查询</button>
                 </fieldset>
+                <br/>
                 <button class="btn" type="submit"><a href="${pageContext.request.contextPath}/dev/flatform/app/addBegin">新增app信息</a></button>
             </form>
             <table class="table table-hover table-bordered">
@@ -135,7 +145,7 @@
                         <td>${list.downloads}</td>
                         <td>${list.versionId}</td>
                         <td>
-                            <select name="">
+                            <select>
                                 <option><a href="#">acti</a></option>
                                 <option><a href="#">acti</a></option>
                                 <option><a href="#">acti</a></option>
@@ -144,13 +154,7 @@
                         </td>
                     </tr>
                 </c:forEach>
-                <%--<c:forEach items="${list}" var="account">--%>
-                    <%--<tr>--%>
-                        <%--<td>${account.id}</td>--%>
-                        <%--<td>${account.name}</td>--%>
-                        <%--<td>${account.money}</td>--%>
-                    <%--</tr>--%>
-                <%--</c:forEach>--%>
+
                 </tbody>
             </table>
             <div class="pagination pagination-centered">
