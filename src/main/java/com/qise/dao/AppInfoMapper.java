@@ -59,8 +59,8 @@ public interface AppInfoMapper {
      * @return
      */
     @Insert("insert into \n" +
-            "         app_info(softwareName,APKName,supportROM,interfaceLanguage,softwareSize,devId,appInfo,status,flatformId,categoryLevel3,downloads,createdBy,creationDate,categoryLevel1,categoryLevel2,logoPicPath,logoLocPath) \n " +
-            "          values(#{softwareName},#{APKName},#{supportROM},#{interfaceLanguage},#{softwareSize},#{devId},#{appInfo},#{status},#{flatformId},#{categoryLevel3},#{downloads},#{createdBy},#{creationDate},#{categoryLevel1},#{categoryLevel2},#{logoPicPath},#{logoLocPath})")
+            " app_info(softwareName,APKName,supportROM,interfaceLanguage,softwareSize,devId,appInfo,status,flatformId,categoryLevel3,downloads,createdBy,creationDate,categoryLevel1,categoryLevel2,logoPicPath,logoLocPath) \n " +
+            " values(#{softwareName},#{APKName},#{supportROM},#{interfaceLanguage},#{softwareSize},#{devId},#{appInfo},#{status},#{flatformId},#{categoryLevel3},#{downloads},#{createdBy},#{creationDate},#{categoryLevel1},#{categoryLevel2},#{logoPicPath},#{logoLocPath})")
     void addAppInfo(AppInfo appInfo);
 
 }

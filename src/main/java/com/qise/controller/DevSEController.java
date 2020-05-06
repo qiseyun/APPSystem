@@ -64,6 +64,23 @@ public class DevSEController {
         return "devHome/appInfoList";
     }
 
+    /**
+     * 根据软件名称模糊查询
+     * @param
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/listAll")
+    public String listAll(Model model){
+
+        return "devHome/appInfoList";
+    }
+
+    /**
+     * 一级分类
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/one")
     public String one(Model model){
         List<String> categoryLevel1 = appCategoryService.findCategoryLevel1();
@@ -71,7 +88,12 @@ public class DevSEController {
         return "devHome/appInfoList";
     }
 
-
+    /**
+     * 二级分类
+     * @param categoryLevel1
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "two")
     public String two(@RequestParam("categoryLevel1") String categoryLevel1 ,Model model){
         if (categoryLevel1.equals(null) || categoryLevel1==""){
@@ -82,6 +104,13 @@ public class DevSEController {
         return "devHome/appInfoList";
     }
 
+    /**
+     * 三级分类
+     * @param categoryLevel1
+     * @param categoryLevel2
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "three")
     public String three(String categoryLevel1, String categoryLevel2 ,Model model){
         if (categoryLevel1.equals(null) || categoryLevel1=="" || categoryLevel2.equals(null) || categoryLevel2==""){

@@ -14,14 +14,6 @@ import java.util.Map;
 public interface DataDictionaryMapper {
 
     /**
-     * @Description: 获取不同的类型信息
-     * @param: [typeCode]
-     * @return: java.util.List<com.bdqn.appInfo.pojo.Dictionary>
-     * @Date: 2019/07/19 16:50
-     */
-    List<DataDictionary> selectByTypeCode(@Param("typeCode") String typeCode);
-
-    /**
      * 通过statusId来查软件状态
      * @param map
      * @return

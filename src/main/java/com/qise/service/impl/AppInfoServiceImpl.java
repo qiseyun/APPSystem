@@ -34,8 +34,14 @@ public class AppInfoServiceImpl implements AppInfoService{
         return appInfoMapper.findByName(softwareName);
     }
 
+    /**
+     * 查询所有软件详细信息
+     * @param queryPageBean
+     * @return
+     */
     @Override
     public List<AppInfo> findAppInfo(QueryPageBean queryPageBean) {
+
         return null;
     }
 
@@ -48,6 +54,10 @@ public class AppInfoServiceImpl implements AppInfoService{
         return appInfoMapper.findAlltwo();
     }
 
+    /**
+     * 添加软件
+     * @param map
+     */
     @Override
     public void addAppInfo(Map map) {
 

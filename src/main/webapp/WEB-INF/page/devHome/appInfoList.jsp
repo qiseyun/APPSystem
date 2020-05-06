@@ -14,6 +14,7 @@
     <link href="${pageContext.request.contextPath }/statics/mycss/bootstrap.min.css" rel="stylesheet">
     <%-- js --%>
     <script src="${pageContext.request.contextPath }/statics/js/jquery-3.4.1.min.js"></script>
+    <script src="${pageContext.request.contextPath }/statics/js/applist.js"></script>
 
 </head>
 <body>
@@ -78,10 +79,12 @@
                     <p>
                         一级分类:
                         <select name="categoryLevel1">
-                            <option>--请选择--</option>
-                            <c:forEach var="categoryLevel1" items="${one}" >
-                                <option>${categoryLevel1}</option>
-                            </c:forEach>
+                            <option value="">--请选择--</option>
+                                <c:forEach var="categoryLevel1" items="${one}">
+                                    <option>
+                                        ${categoryLevel1}
+                                    </option>
+                                </c:forEach>
                         </select>------
                         二级分类:
                         <select name="categoryLevel2">
